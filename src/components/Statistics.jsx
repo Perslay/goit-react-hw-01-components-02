@@ -1,32 +1,34 @@
-import data from '../data.json';
+import PropTypes from 'prop-types';
 
-// need proptypes
-// need to use props without index
+// bg color can be randomised at the end
 
-export const Statistics = () => {
+export const Statistics = ({ data }) => {
   const { title, stats } = data;
   return (
-    <section class="statistics">
-      <h2 class="title">{title}</h2>
+    <section className="statistics">
+      {title && <h2 className="title">{title}</h2>}
 
-      <ul class="stat-list">
-        <li class="item">
-          <span class="label">{stats[0].label}</span>
-          <span class="percentage">{stats[0].percentage}</span>
-        </li>
-        <li class="item">
-          <span class="label">{stats[1].label}</span>
-          <span class="percentage">{stats[1].percentage}</span>
-        </li>
-        <li class="item">
-          <span class="label">{stats[2].label}</span>
-          <span class="percentage">{stats[2].percentage}</span>
-        </li>
-        <li class="item">
-          <span class="label">{stats[3].label}</span>
-          <span class="percentage">{stats[3].percentage}</span>
-        </li>
+      <ul className="stat-list">
+        {stats.map(stat => (
+          <li key={stat.id} className="item">
+            <span className="label">{stat.label}</span>
+            <span className="percentage">{stat.percentage}%</span>
+          </li>
+        ))}
       </ul>
     </section>
   );
+};
+
+Statistics.propTypes = {
+  data: PropTypes.shape({
+    title: PropTypes.string,
+    stats: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        label: PropTypes.string,
+        percentage: PropTypes.number,
+      })
+    ),
+  }).isRequired,
 };
