@@ -1,5 +1,7 @@
 import user from '../user.json';
 
+// need proptypes
+
 export const Profile = () => {
   const { username, tag, location, avatar, stats } = user;
   return (
