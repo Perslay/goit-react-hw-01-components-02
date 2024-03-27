@@ -1,3 +1,19 @@
 {
-  "friends": []
+  "friends": [
+    {
+      "avatar": "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
+      "name": "Natalia",
+      "isOnline": true
+    },
+    {
+      "avatar": "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
+      "name": "Andrzej",
+      "isOnline": false
+    },
+    {
+      "avatar": "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
+      "name": "Marek",
+      "isOnline": true
+    }
+  ]
 }

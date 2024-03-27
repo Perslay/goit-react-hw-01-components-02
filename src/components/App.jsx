@@ -5,6 +5,7 @@ import friends from '../data/friends.json';
 import { Profile } from './Profile';
 import { Statistics } from './Statistics';
 import { FriendList } from './FriendList';
+// import { FriendListItem } from './FriendListItem';
 
 export const App = () => {
   return (
