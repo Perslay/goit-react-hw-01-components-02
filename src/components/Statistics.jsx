@@ -1,8 +1,13 @@
 import PropTypes from 'prop-types';
+import css from '../css/Statistics.module.css';
 
 // bg color can be randomised at the end
 
 export const Statistics = ({ data }) => {
+  if (!data || !data.stats || !Array.isArray(data.stats)) {
+    return null;
+  }
+
   const { title, stats } = data;
   return (
     <section className="statistics">
