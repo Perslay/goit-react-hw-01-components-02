@@ -2,12 +2,12 @@
 import { FriendListItem } from './FriendListItem';
 
 export const FriendList = ({ friends }) => {
-  const friendList = friends.friends;
+  const friendList = friends.friendsArr;
   // accessing friends list in the friends object from friends.json
   return (
     <ul className="friend-list">
       {friendList.map(friend => (
-        <FriendListItem key={friend.name} friend={friend}></FriendListItem>
+        <FriendListItem key={friend.id} friend={friend}></FriendListItem>
       ))}
     </ul>
   );

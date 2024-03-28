@@ -1,19 +1,34 @@
 {
-  "friends": [
+  "friendsArr": [
     {
+      "id": "id-1",
       "avatar": "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
-      "name": "Natalia",
+      "name": "Mango",
       "isOnline": true
     },
     {
+      "id": "id-2",
       "avatar": "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
-      "name": "Andrzej",
+      "name": "Kiwi",
       "isOnline": false
     },
     {
+      "id": "id-3",
       "avatar": "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
-      "name": "Marek",
+      "name": "Ajax",
       "isOnline": true
+    },
+    {
+      "id": "id-3",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
+      "name": "Jay",
+      "isOnline": true
+    },
+    {
+      "id": "id-3",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/1077/1077012.png",
+      "name": "Poly",
+      "isOnline": false
     }
   ]
 }

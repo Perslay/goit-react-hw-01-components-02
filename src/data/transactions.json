@@ -1,0 +1,9 @@
+{
+  "transactionsArr": [
+    { "id": "id-1", "type": "Invoice", "amount": 125, "currency": "USD" },
+    { "id": "id-2", "type": "Withdrawal", "amount": 85, "currency": "USD" },
+    { "id": "id-3", "type": "Deposit", "amount": 103.1, "currency": "BWP" },
+    { "id": "id-4", "type": "Payment", "amount": 862.44, "currency": "AUD" },
+    { "id": "id-5", "type": "Withdrawal", "amount": 371.43, "currency": "MUR" }
+  ]
+}
