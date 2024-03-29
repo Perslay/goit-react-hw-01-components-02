@@ -1,25 +1,58 @@
 import PropTypes from 'prop-types';
 import css from '../css/Statistics.module.css';
 
-// bg color can be randomised at the end
+// randomise background color for list item
+const randomiseColor = () => {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+};
+
+// calculate background lightness
+const calculateLuminance = color => {
+  const hexToRgb = hex =>
+    hex
+      .replace(
+        /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
+        (m, r, g, b) => '#' + r + r + g + g + b + b
+      )
+      .substring(1)
+      .match(/.{2}/g)
+      .map(x => parseInt(x, 16));
+
+  const [r, g, b] = hexToRgb(color);
+
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+};
+
+// calculate contrast text color
+const getTextColor = color => {
+  const luminance = calculateLuminance(color);
+  return luminance > 0.5 ? '#000000' : '#ffffff';
+};
 
 export const Statistics = ({ data }) => {
-  if (!data || !data.stats || !Array.isArray(data.stats)) {
-    return null;
-  }
-
   const { title, stats } = data;
   return (
-    <section className="statistics">
-      {title && <h2 className="title">{title}</h2>}
+    <section className={css.statistics}>
+      {title && <h2 className={css.title}>{title}</h2>}
 
-      <ul className="stat-list">
-        {stats.map(stat => (
-          <li key={stat.id} className="item">
-            <span className="label">{stat.label}</span>
-            <span className="percentage">{stat.percentage}%</span>
-          </li>
-        ))}
+      <ul className={css.statList}>
+        {stats.map(stat => {
+          // creating styling variables
+          const backgroundColor = randomiseColor();
+          const textColor = getTextColor(backgroundColor);
+
+          return (
+            <li
+              key={stat.id}
+              className={css.item}
+              // using styles
+              style={{ backgroundColor, color: textColor }}
+            >
+              <span className={css.label}>{stat.label}</span>
+              <span className={css.percentage}>{stat.percentage}%</span>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );
