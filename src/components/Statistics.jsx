@@ -3,7 +3,10 @@ import css from '../css/Statistics.module.css';
 
 // randomise background color for list item
 const randomiseColor = () => {
-  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+  const randomColor = Math.floor(Math.random() * 16777215).toString(16);
+  // return randomColor.trim() === '#' ? '#FF0000' : randomColor;
+  const paddedColor = randomColor.padStart(6, '0');
+  return `#${paddedColor}`;
 };
 
 // calculate background lightness
@@ -12,7 +15,7 @@ const calculateLuminance = color => {
     hex
       .replace(
         /^#?([a-f\d])([a-f\d])([a-f\d])$/i,
-        (m, r, g, b) => '#' + r + r + g + g + b + b
+        (r, g, b) => '#' + r + r + g + g + b + b
       )
       .substring(1)
       .match(/.{2}/g)

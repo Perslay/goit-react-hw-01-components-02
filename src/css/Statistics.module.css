@@ -1,17 +1,33 @@
 .statistics {
+  background-color: var(--color-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px var(--color-gray);
+  font-size: 18px;
+  margin: 2rem auto;
+  max-width: 300px;
+  overflow: hidden;
 }
 
 .title {
+  padding: 1rem;
+  font-size: 28px;
 }
 
 .statList {
+  list-style: none;
 }
 
 .item {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem;
 }
 
 .label {
+  font-size: 18px;
 }
 
 .percentage {
+  font-size: 24px;
 }
