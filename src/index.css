@@ -1,10 +1,11 @@
 @import-normalize; /* bring in normalize.css styles */
 
 :root {
-  --color-white: #eee;
-  --color-lighter: #dde;
-  --color-light: #ccd;
-  --color-gray: #aaa;
+  --color-white: #f8f8f8;
+  --color-lighter: #eaeaf2;
+  --color-light: #d3d3e2;
+  --color-lightgray: #c7c7c7;
+  --color-gray: #777;
   --color-black: #111;
 }
 

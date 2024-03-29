@@ -1,50 +1,111 @@
 .profile {
   background-color: var(--color-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px var(--color-gray);
+  font-size: 18px;
   margin: 1rem auto;
-  width: 90vw;
+  max-width: 300px;
+  overflow: hidden;
 }
 
 .description {
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .avatar {
   border-radius: 50%;
-  margin-bottom: 2rem;
+  margin: 0 auto 2rem;
+  max-width: 150px;
 }
 
 .name {
-  font-size: 1.5em;
+  font-size: 28px;
   font-weight: bolder;
 }
 
 .tag {
-  padding: 0.5rem 0;
+  color: var(--color-gray);
+  padding: 0.8rem 0;
 }
 
 .location {
+  color: var(--color-gray);
 }
 
 .stats {
   background-color: var(--color-lighter);
-  gap: 1rem;
   list-style: none;
 }
 
 .stat {
-  border-top: 1px solid var(--color-gray);
-  padding: 1rem;
+  border-top: 1px solid var(--color-lightgray);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.3rem;
 }
 
 .label {
+  color: var(--color-gray);
 }
 
 .quantity {
+  font-weight: bolder;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 767px) {
+  .profile {
+    max-width: 500px;
+  }
+
+  .avatar {
+    max-width: 200px;
+  }
+
   .stats {
+    border-top: 1px solid var(--color-lightgray);
     display: flex;
+    justify-content: space-between;
+  }
+
+  .stat {
+    border: none;
+    border-right: 1px solid var(--color-lightgray);
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  .stat:last-child {
+    border: none;
+  }
+
+  .label,
+  .quantity {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .profile {
+    max-width: 800px;
+  }
+
+  .avatar {
+    max-width: 300px;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+
+  .tag {
+    padding: 1rem 0;
+  }
+
+  .stat {
+    gap: 0.8rem;
+    padding: 1.8rem;
   }
 }

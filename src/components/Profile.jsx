@@ -10,6 +10,11 @@ export const Profile = ({ user }) => {
     stats,
   } = user;
 
+  // add commas for big numbers
+  const formatNumber = number => {
+    return number.toLocaleString('en-US');
+  };
+
   return (
     <div className={css.profile}>
       <div className={css.description}>
@@ -22,15 +27,15 @@ export const Profile = ({ user }) => {
       <ul className={css.stats}>
         <li className={css.stat}>
           <span className={css.label}>Followers</span>
-          <span className={css.quantity}>{stats.followers}</span>
+          <span className={css.quantity}>{formatNumber(stats.followers)}</span>
         </li>
         <li className={css.stat}>
           <span className={css.label}>Views</span>
-          <span className={css.quantity}>{stats.views}</span>
+          <span className={css.quantity}>{formatNumber(stats.views)}</span>
         </li>
         <li className={css.stat}>
           <span className={css.label}>Likes</span>
-          <span className={css.quantity}>{stats.likes}</span>
+          <span className={css.quantity}>{formatNumber(stats.likes)}</span>
         </li>
       </ul>
     </div>
