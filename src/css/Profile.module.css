@@ -55,7 +55,7 @@
 
 @media screen and (min-width: 767px) {
   .profile {
-    max-width: 500px;
+    max-width: 510px;
   }
 
   .avatar {
@@ -89,7 +89,7 @@
 
 @media screen and (min-width: 1280px) {
   .profile {
-    max-width: 800px;
+    max-width: 840px;
   }
 
   .avatar {

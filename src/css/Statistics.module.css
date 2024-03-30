@@ -36,7 +36,7 @@
 
 @media screen and (min-width: 767px) {
   .statistics {
-    max-width: 500px;
+    max-width: 510px;
   }
 
   .statList {
@@ -61,7 +61,7 @@
 
 @media screen and (min-width: 1280px) {
   .statistics {
-    max-width: 800px;
+    max-width: 840px;
   }
 
   .title {
