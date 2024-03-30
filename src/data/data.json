@@ -1,4 +1,5 @@
 {
+  "title": "stats",
   "stats": [
     { "id": "id-1", "label": ".docx", "percentage": 22 },
     { "id": "id-2", "label": ".pdf", "percentage": 4 },

@@ -9,8 +9,10 @@
 }
 
 .title {
-  padding: 1rem;
   font-size: 28px;
+  padding: 2rem;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .statList {
@@ -60,6 +62,11 @@
 @media screen and (min-width: 1280px) {
   .statistics {
     max-width: 800px;
+  }
+
+  .title {
+    font-size: 32px;
+    padding: 2.5rem;
   }
 
   .item {
