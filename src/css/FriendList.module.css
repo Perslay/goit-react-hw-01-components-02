@@ -10,12 +10,14 @@
 
 @media screen and (min-width: 767px) {
   .friendList {
+    font-size: 20px;
     max-width: 500px;
   }
 }
 
 @media screen and (min-width: 1280px) {
   .friendList {
+    font-size: 22px;
     max-width: 800px;
   }
 }

@@ -1,0 +1,45 @@
+.item {
+  align-items: center;
+  border-bottom: 1px solid var(--color-lightgray);
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.item:last-child {
+  border: none;
+}
+
+.status {
+  background-color: #ff524c;
+  border-radius: 50%;
+  display: block;
+  min-height: 14px;
+  min-width: 14px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+}
+
+/* for long names */
+.name {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 767px) {
+  .avatar {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .avatar {
+    width: 54px;
+    height: 54px;
+  }
+}
